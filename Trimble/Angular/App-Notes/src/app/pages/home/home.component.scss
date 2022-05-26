@@ -1,0 +1,40 @@
+.home {
+  padding: 5%;
+  background-image: url("../../../assets/background(1).jpg");
+  background-color: rgb(214, 138, 76);
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-size: 100% auto;
+  background-position-x: center;
+  background-position-y:top ;
+  top: 0;
+
+  .frostContainer {
+    width: 95%;
+    height: auto;
+    background-color: rgba(228, 228, 228, 0.685);
+    padding: 30px;
+    border-radius: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-size: cover;
+
+    .notes {
+      display: grid !important;
+    }
+
+
+    h1 {
+      font-weight: 600;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 8vh;
+      align-self: center;
+    }
+  }
+
+  .frostContainer::before {
+    box-shadow: inset 0 0 2500px rgba(255, 255, 255, .15);
+    filter: blur(15px);
+  }
+}

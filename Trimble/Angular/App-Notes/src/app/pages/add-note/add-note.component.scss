@@ -1,0 +1,16 @@
+.newNoteComp {
+    padding: 50px 30px 30px 30px;
+    background-color: beige;
+    height: 100%;
+  
+    .add-note-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+    }
+
+    .mat-select {
+      background-color: white;
+    }
+  }
+  

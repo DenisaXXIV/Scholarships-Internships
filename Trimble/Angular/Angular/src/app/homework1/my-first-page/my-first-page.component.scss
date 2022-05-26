@@ -1,0 +1,71 @@
+.Homework1 {
+  font: #5c0c0e normal;
+  font-family: Arial, Arial Rounded MT Bold;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-image: url("../../../assets/control-gfad8ee2e2_1920(1).png");
+  background-color: rgb(228, 186, 186);
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-size: 64% 100%  ;
+}
+
+h1 {
+  font-family: Berlin Sans FB, Berlin Sans FB Demi;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type=submit],
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  width: 49%;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+
+input[type=submit]:hover {
+  background-color: #9addc4;
+}
+
+input[type=button] {
+  background-color: #cc688d;
+}
+
+input[type=button]:hover {
+  background-color: #eeccd9;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #cf778df1;
+  padding: 5px 40px;
+  width: 30%;
+  margin: 3%;
+}
+
+img {
+  width: 64%;
+}

@@ -1,0 +1,20 @@
+.icon {
+  font-size: 45pt;
+  color: rgba(0, 0, 0, 0.39);
+  filter: blur(1px);
+  position: absolute;
+  left: 68px;
+  bottom: -100px;
+}
+
+.mat-card::before {
+  box-shadow: inset 0 0 2500px rgba(255, 255, 255, .15);
+  filter: blur(15px);
+}
+
+.mat-card {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.219);
+  margin: 40px 10px 20px 10px;
+}

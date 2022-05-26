@@ -1,0 +1,57 @@
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.mat-card {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 40px 5px 20px 5px;
+
+  h5 {
+    text-align: center;
+  }
+
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .buttons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .delete-btn {
+    position: absolute;
+  }
+}
+
+.notesButtons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.pins {
+  padding-bottom: 10px;
+}
+
+img {
+  position: absolute;
+  top: -45px;
+  left: 100px;
+}
+
+button{
+  cursor: pointer;
+}

@@ -1,0 +1,5 @@
+<div class="filter-container">
+  <div *ngFor="let category of categories" class="filter-div">
+    <button mat-raised-button (click)="selectCategory(category.id)">{{category.name | uppercase}}</button>
+  </div>
+</div>

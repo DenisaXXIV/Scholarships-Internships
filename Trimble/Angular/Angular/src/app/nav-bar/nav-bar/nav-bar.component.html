@@ -1,0 +1,25 @@
+<div class="fixedbar">
+  <div class="active_page">
+    <h1>Homeworks</h1>
+  </div>
+
+  <!----------------------------------------------- MENIU ----------------------------------------------->
+  <div id="mySidenav" class="menu">
+    <button href="javascript:void(0)" class="closeBtn" (click)="closeMenu()">
+      <mat-icon [inline]="true">clear</mat-icon>
+    </button>
+    <div class="centerMenu">
+      <div class="menuGrid">
+        <button routerLink="/notes" type="button" id="app-notes">Notes App</button>
+        <button routerLink="/homework1" id="Homework1">Homework 1</button>
+        <button routerLink="/homework2" id="Homework2">Homework 2</button>
+        <button routerLink="/homework3" id="Homework3">Homework 3</button>
+        <button routerLink="/homework4" id="Homework4">Homework 4</button>
+        <button routerLink="/homework5/5" id="Homework5">Homework 5</button>
+      </div>
+    </div>
+  </div>
+  <div class="menuBtn">
+    <mat-icon (click)="openMenu()" [inline]="true">dehaze</mat-icon>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="editNoteComp">
+    <h1>Edit note </h1>
+  
+    <div class="edit-note-form">
+      <mat-form-field>
+        <input matInput [(ngModel)]="noteTitle" />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="noteDescription"></textarea>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Choose a color</mat-label>
+        <mat-select>
+          <mat-option>red</mat-option>
+          <mat-option>green</mat-option>
+          <mat-option>blue</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <button mat-button (click)="editNote()">Submit</button>
+  </div>
+  

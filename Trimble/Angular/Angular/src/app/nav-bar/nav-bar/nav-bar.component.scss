@@ -1,0 +1,192 @@
+.centerMenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  
+    .menuGrid{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+  
+      button {
+        transition-duration: 0.4s;
+        border-radius: 8px;
+        padding: 14px 40px;
+        font-size: 20px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        width: 495px;
+        height: 280.7px;
+      }
+    }
+  }
+
+#Homework1 {
+  background: rgba(0, 0, 0, .65) url("../../../assets/Ex1.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Homework1:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/Ex1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#Homework2 {
+  background: rgba(0, 0, 0, .65) url("../../../assets/waterfall.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Homework2:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/waterfall.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#Homework3 {
+  background: rgba(0, 0, 0, .65) url("../../../assets/Homework3.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Homework3:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/Homework3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#Homework4 {
+  background: rgba(0, 0, 0, .65) url("../../../assets/Homework4.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Homework4:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/Homework4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#Homework5 {
+  background: rgba(0, 0, 0, .65) url("../../../assets/Homework5.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Homework5:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/Homework5.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#app-notes {
+  background: rgba(0, 0, 0, .65) url("../../../assets/AngularOnlyAppNotes.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#app-notes:hover {
+  background: rgba(0, 0, 0, .20) url("../../../assets/AngularOnlyAppNotes.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.fixedbar {
+  background-image: url("../../../assets/Banner.png");
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 66px;
+
+  .menuBtn {
+    display: flex;
+    justify-content:right;
+    align-items:flex-end;
+    font-size: 35pt;
+    z-index: 0;
+    padding-top: 18px;
+    padding-right: 20px; 
+    top: 0;
+    background-color: rgba(26, 0, 0, 0.0);
+    overflow: hidden;
+    border: none;
+    color: #2971b4;
+    cursor: pointer;
+  }
+
+  .active_page {
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    top:17px;
+    left: 42%;
+
+    h1{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30pt;
+        text-decoration: none;
+        color: #2971b4;
+    }
+  }
+}
+
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0;
+  background-color: beige;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+  .closeBtn {
+    position: absolute;
+    height: 60px;
+    top: 0;
+    right: 10px;
+    color: #2971b4;
+    margin-right: 0;
+    font-size: 64px;
+    overflow: hidden;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+mat-icon{
+    font-size:24pt ;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .menu {
+    padding-top: 15px;
+  }
+}

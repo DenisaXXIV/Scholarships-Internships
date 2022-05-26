@@ -1,0 +1,7 @@
+<h2>Uppercased string: {{firstString | uppercase}}</h2>
+<h2>Lowercased string: {{secondString | lowercase }}</h2>
+<h1 background>Text 1 ---> {{firstString | myPipe}}</h1>
+<h3>Even index dates:</h3>
+<div *ngFor="let element of elementList, let myDate=odd">
+  <p *ngIf="myDate">{{element | date:"fullDate"}}</p>
+</div>

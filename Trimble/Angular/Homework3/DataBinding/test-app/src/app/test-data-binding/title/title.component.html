@@ -1,0 +1,15 @@
+<div id="container">
+    <table>
+        <tr>
+            <h1 [style.background]="background">Title for Homework 3( Data Binding )</h1>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" [(ngModel)]="color" placeholder="What color do you prefer?">
+            </td>
+            <td>
+                <button mat-button (click)="setBackground()">Submit</button>
+            </td>
+        </tr>
+    </table>
+</div>

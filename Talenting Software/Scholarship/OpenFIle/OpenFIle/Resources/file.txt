@@ -1,0 +1,2 @@
+﻿Create a program that can display the content
+and the number of words from a text-file.

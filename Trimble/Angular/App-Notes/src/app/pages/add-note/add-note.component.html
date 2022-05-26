@@ -1,0 +1,30 @@
+<div class="newNoteComp">
+  <h1>New note </h1>
+ 
+    <div class="add-note-form">
+      <form>
+      <label>Title</label>
+      <br>
+      <mat-form-field>
+        <input matInput [(ngModel)]="noteTitle" type="text" name="title" />
+      </mat-form-field>
+    </form>
+    <form>
+      <label>Description</label>
+      <br>
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="noteDescription" type="text" name="description"></textarea>
+      </mat-form-field>
+    </form>
+      <mat-form-field>
+        <label>Choose a category</label>
+        <br>
+        <mat-select [(ngModel)]="selectedCategoryId" *ngIf="categories" >
+          <mat-option *ngFor="let categ of categories" [value]="categ.id">{{categ.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+
+  <button mat-button (click)="addNote()">Add</button>
+</div>

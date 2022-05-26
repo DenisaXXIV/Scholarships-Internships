@@ -1,0 +1,15 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\bin\Debug\net6.0\OpenFIle.exe
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\bin\Debug\net6.0\OpenFIle.deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\bin\Debug\net6.0\OpenFIle.runtimeconfig.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\bin\Debug\net6.0\OpenFIle.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\bin\Debug\net6.0\OpenFIle.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\refint\OpenFIle.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\OpenFIle.genruntimeconfig.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\OpenFIle\OpenFIle\obj\Debug\net6.0\ref\OpenFIle.dll

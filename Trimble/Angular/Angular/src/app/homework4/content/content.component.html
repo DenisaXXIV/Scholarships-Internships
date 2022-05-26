@@ -1,0 +1,14 @@
+<h1>Part 5: Pipes. Directives</h1>
+
+<h2>Pipes</h2>
+<p>Uppercased string: {{firstString | uppercase}}</p>
+<p>Lowercased string: {{secondString | lowercase }}</p>
+
+<h2>Custom Pipes</h2>
+<p background>Text 1 ---> {{firstString | myPipe}}</p>
+
+<h2>Directives</h2>
+<p>Even index dates:</p>
+<div *ngFor="let element of elementList, let myDate=odd">
+  <p *ngIf="myDate">{{element | date:"fullDate"}}</p>
+</div>

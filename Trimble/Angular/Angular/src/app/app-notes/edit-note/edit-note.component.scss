@@ -1,0 +1,12 @@
+.editNoteComp {
+    padding: 50px 30px 30px 30px;
+    background-color: beige;
+    height: 100%;
+  
+    .edit-note-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+    }
+  }
+  

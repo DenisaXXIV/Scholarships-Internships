@@ -1,0 +1,10 @@
+<div class="home">
+  <div class="frostContainer">
+    <h1>Notes App</h1>
+    <app-filter (emitSelectedFilter)="receiveCategory($event)"></app-filter>
+    <div class="notes">
+      <app-note [selectedCategoryId]="categoryId"></app-note>
+      <app-tools></app-tools>
+    </div>
+  </div>
+</div>

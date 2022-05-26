@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NotesApi</name>
+    </assembly>
+    <members>
+        <member name="M:NotesApi.Controllers.CategoriesController.GetCategories">
+            <summary>
+            Get all categories
+            </summary>
+            <response code="200">Everything worked</response>
+            <returns>Categories</returns>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.GetNotes(System.Guid)">
+            <summary>
+            Get notes by ownerId
+            </summary>
+            <param name="ownerID"></param>
+            <returns>a list of all notes</returns>
+            <response code="200">All notes are listed</response>
+            <response code="500">Server problems</response>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.GetNote(System.Guid)">
+            <summary>
+            Get note by id
+            </summary>
+            <param name="id"></param>
+            <returns>a list of all notes</returns>
+            <response code="200">All notes are listed</response>
+            <response code="500">Server problems</response>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.CreateNote(NotesApi.Models.Note)">
+            <summary>
+            create a note
+            </summary>
+            <param name="note"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.UpdateNote(System.Guid,NotesApi.Models.Note)">
+            <summary>
+            update a note
+            </summary>
+            <param name="id"></param>
+            <param name="note"></param>
+            <returns></returns>
+            <response code="200">Everything worked</response>
+            <response code="404">The note can't be created</response>
+            <response code="400">The note can't be null</response>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.DeleteNote(System.Guid)">
+            <summary>
+            Delete a note
+            </summary>
+            <param name = "id" ></param >
+            <returns ></returns >
+            <response code="200">Note deleted</response>
+            <response code="404">Note not found</response>
+        </member>
+        <member name="M:NotesApi.Controllers.NotesController.GetNotes">
+            <summary>
+            Get all notes
+            </summary>
+            <returns>a list of all notes</returns>
+            <response code="200">All notes are listed</response>
+            <response code="500">Server problems</response>
+        </member>
+        <member name="M:NotesApi.Controllers.OwnerController.GetOwners">
+            <summary>
+            Get all owners
+            </summary>
+            <returns>Owner list</returns>
+            
+        </member>
+        <member name="M:NotesApi.Controllers.OwnerController.CreateOwner(NotesApi.Models.Owner)">
+            <summary>
+            Create an owner
+            </summary>
+            <param name="owner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotesApi.Controllers.OwnerController.UpdateOwner(System.Guid,NotesApi.Models.Owner)">
+            <summary>
+            Update an owner
+            </summary>
+            <param name="id"></param>
+            <param name="owner"></param>
+            <returns></returns>
+            <response code="200">Everything worked</response>
+            <response code="404">The owner can't be created</response>
+            <response code="400">The owner can't be null</response>
+        </member>
+        <member name="M:NotesApi.Controllers.OwnerController.DeleteOwner(System.Guid)">
+            <summary>
+            Delete an owner
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="200">Owner deleted</response>
+            <response code="404">The owner can't be created</response>
+        </member>
+        <member name="M:NotesApi.Controllers.WeatherForecastController.Get">
+            <summary>
+            Get 5 WeatherForecast value
+            </summary>
+            <returns>an array of forecasts</returns>
+            <response code="200">Everything worked</response>
+            <response code="400">wrong request</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.mat-card {
+    width: 150px;
+    height: 150px;
+    float: left;
+    background-color: green;
+    margin: 20px 10px 20px 10px;
+    .delete-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

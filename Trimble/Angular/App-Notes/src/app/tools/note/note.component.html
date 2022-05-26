@@ -1,0 +1,37 @@
+<div *ngFor="let note of notes;index as i" class="margin-top-10">
+    <mat-card [ngStyle]="{'background-color' : backgrounds[i]}">
+      <div class="card-header">
+        <mat-card-header>
+  
+          <mat-card-title>
+            {{note.title}}
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <div class="card-content">
+        <mat-card-content>
+          <p>
+            {{note.description}}
+          </p>
+        </mat-card-content>
+      </div>
+      <div class="buttons">
+        <div class="notesButtons">
+          <button mat-icon-button>
+            <mat-icon  title="Doing">assignment</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon  title="Done">assignment_turned_in</mat-icon>
+          </button>
+          <button mat-icon-button routerLink="edit-notes/{{note.id}}">
+            <mat-icon >edit</mat-icon>
+          </button>
+          <button mat-icon-button mat-icon-button (click)="deleteNote(note)">
+            <mat-icon>delete_forever</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  
+  
