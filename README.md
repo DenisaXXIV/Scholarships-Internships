@@ -7,5 +7,8 @@
 
 | Start Date | End Date | Name | Company | Type |Languages| Frameworks|
 |----|-----|------|-------|--|--|--|
-|1.03.2022 | 8.04.2022 | [TrimblExperience](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble) | Trimble|Scholarship|C# , TypeScript|Angular , .NET |
+|05.10.2021| 28.11.2022| | e-novation|Internship|Python||
+| oct. 2021| jan. 2022| |Xperi|Scholarship|Python||
+| feb. 2022 | apr. 2022 | Curious Minds Spring School | Siemens Digital Industries Software |Scholarship | C++||
+|01.03.2022 | 08.04.2022 | [TrimblExperience](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble) | Trimble|Scholarship|C#  TypeScript| .NET   Angular |
 |23.05.2022| 22.06.22 | [TalentInnovators](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Talenting%20Software/Scholarship) | Talenting Software|Scholarship|C#| .NET|
