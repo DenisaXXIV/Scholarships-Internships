@@ -12,5 +12,12 @@ namespace FlowerShop.Models
         public string Color { get; set; }
         public int Number { get; set; }
         public float Price { get; set; }
+
+        public Hydrangeas()
+        {
+            Color = "Pink";
+            Number = 300;
+            Price = 30;
+        }
     }
 }

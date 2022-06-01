@@ -1,0 +1,15 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\bin\Debug\net6.0\FlowerShop.exe
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\bin\Debug\net6.0\FlowerShop.deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\bin\Debug\net6.0\FlowerShop.runtimeconfig.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\bin\Debug\net6.0\FlowerShop.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\bin\Debug\net6.0\FlowerShop.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\refint\FlowerShop.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\FlowerShop.genruntimeconfig.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\FlowerShop\FlowerShop\obj\Debug\net6.0\ref\FlowerShop.dll

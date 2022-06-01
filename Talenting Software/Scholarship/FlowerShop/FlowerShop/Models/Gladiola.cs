@@ -13,5 +13,12 @@ namespace FlowerShop.Models
         public string Color { get; set; }
         public int Number { get; set; }
         public float Price { get; set; }
+
+        public Gladiola()
+        {
+            Color = "Mixed";
+            Number = 300;
+            Price = 15;
+        }
     }
 }
