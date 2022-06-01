@@ -25,19 +25,19 @@
     </td>
   </tr>
   <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Angular/Homework2">Part 3: Getting familiar with Angular. Create first app</a>
+    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework2">Part 3: Getting familiar with Angular. Create first app</a>
     </td>
     <td>Part 3: Routing
     </td>
   </tr>
   <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Angular/Homework3/DataBinding/test-app">Part 4: Modules, Components, Templates, Data Binding</a>
+    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework3">Part 4: Modules, Components, Templates, Data Binding</a>
     </td>
     <td>Part 4: Create and Read Resources
     </td>
   </tr>
   <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Angular/Homework4">Part 5: Pipes. Directives</a>
+    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework4">Part 5: Pipes. Directives</a>
     </td>
     <td>Part 5: Update and Delete Resources
     </td>
