@@ -7,5 +7,5 @@
 
 | Start Date | End Date | Name | Company | Type |Languages| Frameworks|
 |----|-----|------|-------|--|--|--|
-|1.03.2022 | 8.04.2022 | [TrimblExperience]((https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble)) | Trimble|Scholarship|C# , TypeScript|Angular , .NET |
+|1.03.2022 | 8.04.2022 | [TrimblExperience](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble) | Trimble|Scholarship|C# , TypeScript|Angular , .NET |
 |23.05.2022| 22.06.22 | [TalentInnovators](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Talenting%20Software/Scholarship) | Talenting Software|Scholarship|C#| .NET|
