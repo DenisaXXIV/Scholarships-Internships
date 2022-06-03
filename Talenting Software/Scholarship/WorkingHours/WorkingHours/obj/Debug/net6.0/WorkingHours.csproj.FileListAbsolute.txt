@@ -1,0 +1,15 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\bin\Debug\net6.0\WorkingHours.exe
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\bin\Debug\net6.0\WorkingHours.deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\bin\Debug\net6.0\WorkingHours.runtimeconfig.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\bin\Debug\net6.0\WorkingHours.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\bin\Debug\net6.0\WorkingHours.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\refint\WorkingHours.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\WorkingHours.genruntimeconfig.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\WorkingHours\WorkingHours\obj\Debug\net6.0\ref\WorkingHours.dll
