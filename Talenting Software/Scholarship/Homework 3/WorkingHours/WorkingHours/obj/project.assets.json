@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\WorkingHours\\WorkingHours\\WorkingHours.csproj",
+      "projectUniqueName": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\Homework 3\\WorkingHours\\WorkingHours\\WorkingHours.csproj",
       "projectName": "WorkingHours",
-      "projectPath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\WorkingHours\\WorkingHours\\WorkingHours.csproj",
+      "projectPath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\Homework 3\\WorkingHours\\WorkingHours\\WorkingHours.csproj",
       "packagesPath": "C:\\Users\\Denisa\\.nuget\\packages\\",
-      "outputPath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\WorkingHours\\WorkingHours\\obj\\",
+      "outputPath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\Homework 3\\WorkingHours\\WorkingHours\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

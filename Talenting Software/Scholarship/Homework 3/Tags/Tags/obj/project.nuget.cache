@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2Uz3C3f/sE/G0jHp9c9nK1+A2m9AUNHJYCnjBXFn3VSsipXhRw22+RikyES/z4Xm7iJZEvcOSCEN9Gq6iu7EDg==",
+  "dgSpecHash": "Y5JI03Mt7tRmHbBWPR08r0Pv+BbNju7xRaL6hxa8eC8LPhEh4ZI/NnJ9aWa56PESeXpk49T4H6ZIxNKeEZRdwA==",
   "success": true,
   "projectFilePath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\Homework 3\\Tags\\Tags\\Tags.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Denisa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

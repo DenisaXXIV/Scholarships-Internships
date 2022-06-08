@@ -1,0 +1,17 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Tags.exe
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Tags.deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Tags.runtimeconfig.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Tags.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Tags.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.csproj.CopyComplete
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\refint\Tags.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\Tags.genruntimeconfig.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags\Tags\obj\Debug\net6.0\ref\Tags.dll

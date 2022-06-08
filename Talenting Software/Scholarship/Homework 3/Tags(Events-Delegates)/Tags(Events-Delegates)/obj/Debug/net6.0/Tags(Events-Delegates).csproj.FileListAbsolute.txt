@@ -1,0 +1,17 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Tags(Events-Delegates).exe
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Tags(Events-Delegates).deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Tags(Events-Delegates).runtimeconfig.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Tags(Events-Delegates).dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Tags(Events-Delegates).pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).csproj.CopyComplete
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\refint\Tags(Events-Delegates).dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\Tags(Events-Delegates).genruntimeconfig.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Homework 3\Tags(Events-Delegates)\Tags(Events-Delegates)\obj\Debug\net6.0\ref\Tags(Events-Delegates).dll
