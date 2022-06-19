@@ -1,0 +1,12 @@
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\bin\Debug\net6.0\Shop.TL.deps.json
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\bin\Debug\net6.0\Shop.TL.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\bin\Debug\net6.0\Shop.TL.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.csproj.AssemblyReference.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.AssemblyInfoInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.AssemblyInfo.cs
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.csproj.CoreCompileInputs.cache
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\refint\Shop.TL.dll
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\Shop.TL.pdb
+E:\Proiecte\Scholarships-Internships\Talenting Software\Scholarship\Shop\Shop.TL\obj\Debug\net6.0\ref\Shop.TL.dll

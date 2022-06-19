@@ -1,0 +1,317 @@
+CREATE DATABASE Shop;
+
+CREATE TABLE IF NOT EXISTS Gender
+(
+    GenderId integer NOT NULL,
+    Gender char NOT NULL,
+    CONSTRAINT Gender_pkey PRIMARY KEY (GenderId)
+)
+
+CREATE TABLE IF NOT EXISTS Client
+(
+    ClientId integer NOT NULL,
+    Name varchar(255) NOT NULL,
+    Street varchar(255) NOT NULL,
+    City varchar(255) NOT NULL,
+    Country varchar(255) NOT NULL,
+    PhoneNumber varchar(255) NOT NULL,
+    GenderId integer NOT NULL,
+    CONSTRAINT Client_pkey PRIMARY KEY (ClientId),
+    CONSTRAINT Client_Gender_fkey FOREIGN KEY (GenderId)
+        REFERENCES Gender (GenderId) MATCH SIMPLE
+)
+
+CREATE TABLE IF NOT EXISTS Product
+(
+    ProductId integer NOT NULL,
+    Name varchar(255) NOT NULL,
+    Price money NOT NULL,
+    ExpirationDate date NOT NULL,
+    CONSTRAINT Product_pkey PRIMARY KEY (ProductId)
+)
+
+CREATE TABLE IF NOT EXISTS Order
+(
+    OrderId integer NOT NULL,
+    ClientId integer NOT NULL,
+    CreatedDate date NOT NULL,
+    TotalAmount double precision NOT NULL,
+    Discount integer NOT NULL,
+    CONSTRAINT Order_pkey PRIMARY KEY (OrderId),
+    CONSTRAINT Order_Client_fkey FOREIGN KEY (ClientId)
+        REFERENCES Client (ClientId) MATCH SIMPLE
+)
+
+CREATE TABLE IF NOT EXISTS OrderedProduct
+(
+    OrderedProductId integer NOT NULL,
+    OrderId integer NOT NULL,
+    ProductId integer NOT NULL,
+    CONSTRAINT OrderedProduct_pkey PRIMARY KEY (OrderedProductId),
+    CONSTRAINT OrderedProduct_Order_fkey FOREIGN KEY (OrderId)
+        REFERENCES Order (OrderId) MATCH SIMPLE,
+    CONSTRAINT OrderedProduct_Product_fkey FOREIGN KEY (ProductId)
+        REFERENCES Product (ProductId) MATCH SIMPLE
+)
+
+CREATE TABLE IF NOT EXISTS ShoppingCart
+(
+    ShoppingCartId integer NOT NULL,
+    TotalAmount double precision NOT NULL,
+    HasExpired boolean NOT NULL,
+    ClientId integer NOT NULL,
+    CONSTRAINT ShoppingCart_pkey PRIMARY KEY (ShoppingCartId),
+    CONSTRAINT ShoppingCart_Client_fkey FOREIGN KEY (ClientId)
+        REFERENCES Client (ClientId) MATCH SIMPLE
+)
+
+CREATE TABLE IF NOT EXISTS ShoppingCartProduct
+(
+    ShoppingCartProductId integer NOT NULL,
+    ShoppingCartId integer NOT NULL,
+    ProductId integer NOT NULL,
+    CONSTRAINT ShoppingCartProduct_pkey PRIMARY KEY (ShoppingCartProductId),
+    CONSTRAINT ShoppingCartProduct_Product_fkey FOREIGN KEY (ProductId)
+        REFERENCES Product (ProductId) MATCH SIMPLE,
+    CONSTRAINT ShoppingCartProduct_ShoppingCart_fkey FOREIGN KEY (ShoppingCartId)
+        REFERENCES ShoppingCart (ShoppingCartId) MATCH SIMPLE
+)
+
+INSERT INTO Gender
+	(GenderId, Gender)
+	VALUES (1, 'F');
+	
+INSERT INTO Gender
+	(GenderId, Gender)
+	VALUES (2, 'M');
+
+INSERT INTO Client
+	(ClientId, Name, Street, City, Country, PhoneNumber, GenderId)
+	VALUES (1, 'Florian-Andrei Barbu', 'Bulevardul Castanilor', 'Ploiesti', 'Romania', '0755864567',2);
+	
+INSERT INTO Client
+	(ClientId, Name, Street, City, Country, PhoneNumber, GenderId)
+	VALUES (2, 'Augustina Petrica', 'Strada Cuza Voda', 'Sinaia', 'Romania', '0755864567',1);
+
+INSERT INTO Client
+	(ClientId, Name, Street, City, Country, PhoneNumber, GenderId)
+	VALUES (3, 'Ion Moldoveanu', 'Strada Cezar', 'Buzau', 'Romania', '0755698984', 2);
+
+INSERT INTO Product
+	(ProductId, Name, Price, ExpirationDate)
+	VALUES (1,'Curmale uscate' , '$1.80','2023-04-30' );
+	
+INSERT INTO Product
+	(ProductId, Name, Price, ExpirationDate)
+	VALUES (2,'Conserva File de Macrou' ,'$3.50' , '2025-04-07');
+
+INSERT INTO Product
+	(ProductId, Name, Price, ExpirationDate)
+	VALUES (3, 'Cartofi Congelati', '$6.00', '2022-06-12');
+
+INSERT INTO Order
+	(OrderId, ClientId, CreatedDate, TotalAmount, Discount)
+	VALUES (1, 2, '2022-06-10', 3.00, 15);
+	
+INSERT INTO Order
+	(OrderId, ClientId, CreatedDate, TotalAmount, Discount)
+	VALUES (2, 1,'2022-06-09' , 15.00, 20);
+
+INSERT INTO OrderedProduct
+	(OrderedProductId, OrderId, ProductId)
+	VALUES (1, 1, 2);
+	
+INSERT INTO OrderedProduct
+	(OrderedProductId, OrderId, ProductId)
+	VALUES (2, 2, 1);
+
+INSERT INTO OrderedProduct
+	(OrderedProductId, OrderId, ProductId)
+	VALUES (3, 2, 3);
+
+INSERT INTO ShoppingCart
+	(ShoppingCartId, TotalAmount, HasExpired, ClientId)
+	VALUES (1, 3.00, true, 1);
+	
+INSERT INTO ShoppingCart
+	(ShoppingCartId, TotalAmount, HasExpired, ClientId)
+	VALUES (2, 15.00, false, 2);
+
+INSERT INTO ShoppingCartProduct
+	(ShoppingCartProductId, ShoppingCartId, ProductId)
+	VALUES (1, 1, 2);
+	
+INSERT INTO ShoppingCartProduct
+	(ShoppingCartProductId, ShoppingCartId, ProductId)
+	VALUES (2, 2, 1);
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 a	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT COUNT(*)
+	FROM Client
+	INNER JOIN Order 
+	ON Client.ClientId = Order.OrderId;
+
+SELECT Client.ClientId, Client.Name, Client.Street, Client.City, Client.Country, Client.PhoneNumber, Client.GenderId
+	FROM Client
+	INNER JOIN Order ON Client.ClientId = Order.OrderId;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 b	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Order.OrderId, Order.ClientId, Order.CreatedDate, Order.TotalAmount, Order.Discount
+	FROM Order
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	INNER JOIN Product
+	ON Product.ProductId = OrderedProduct.ProductId
+	WHERE Product.ExpirationDate <= CURRENT_DATE;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 c	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Client.ClientId, Client.Name, Client.Street, Client.City, Client.Country, Client.PhoneNumber, Client.GenderId
+	FROM Client
+	INNER JOIN ShoppingCart
+	ON ShoppingCart.ClientId = Client.ClientId
+	WHERE ShoppingCart.HasExpired = true;
+
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 d	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Product.Name, Product.Price, Product.ExpirationDate, Client.Name
+	FROM Product
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.ProductId = Product.ProductId
+	INNER JOIN Order
+	ON Order.OrderId = OrderedProduct.OrderId
+	INNER JOIN Client
+	ON Client.ClientId = Order.ClientId
+	WHERE Order.CreatedDate = CURRENT_DATE;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 e	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Order.OrderId, Order.TotalAmount
+	FROM Order
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	GROUP BY Order.OrderId
+	HAVING SUM(CASE WHEN OrderedProduct.OrderId = Order.OrderId THEN 1 END) > 10;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 f	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Order.OrderId, Client.Name, Order.TotalAmount
+	FROM Order
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	INNER JOIN Product
+	ON Product.ProductId = OrderedProduct.ProductId
+	INNER JOIN Client
+	ON Client.ClientId = Order.ClientId
+	GROUP BY Order.OrderId, Client.Name
+	HAVING SUM(CASE WHEN OrderedProduct.OrderId = Order.OrderId AND Product.Price >= '$6' THEN 1 END) > 0;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 g	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT  ShoppingCart.ShoppingCartId, ShoppingCart.TotalAmount, Client.Name
+	FROM ShoppingCart
+	INNER JOIN ShoppingCartProduct
+	ON ShoppingCartProduct.ShoppingCartId = ShoppingCart.ShoppingCartId
+	INNER JOIN Product
+	ON Product.ProductId = ShoppingCartProduct.ProductId
+	INNER JOIN Client
+	ON Client.ClientId = ShoppingCart.ClientId
+	GROUP BY ShoppingCart.ShoppingCartId, Client.GenderId, Client.Name
+	HAVING SUM(CASE WHEN Product.ExpirationDate > CURRENT_DATE THEN 1 END) > 9 AND HasExpired = false AND Client.GenderId = 2;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 h	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Order.OrderId, Client.Name, Order.CreatedDate, Order.TotalAmount, Order.Discount
+	FROM Order
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	INNER JOIN Product
+	ON Product.ProductId = OrderedProduct.ProductId
+	INNER JOIN Client
+	ON Client.ClientId = Order.ClientId
+	GROUP BY Order.OrderId, Client.GenderId, Client.Name
+	HAVING SUM(CASE WHEN Product.ExpirationDate > CURRENT_DATE THEN 1 END) > 9 AND Client.GenderId = 1;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 i	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Client.Name,
+	SUM(CASE WHEN Order.ClientId = Client.ClientId THEN 1 END) as NumberOfOrders,
+	SUM(CASE WHEN OrderedProduct.OrderId = Order.OrderId THEN 1 END) as NumberOfProductsPerOrder
+	FROM Client
+	INNER JOIN Order
+	ON Order.ClientId = Client.ClientId
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	INNER JOIN Product
+	ON Product.ProductId = OrderedProduct.ProductId
+	GROUP BY Client.ClientId
+	HAVING SUM(CASE WHEN Order.ClientId = Client.ClientId THEN 1 END)  > 4 
+	AND SUM(CASE WHEN OrderedProduct.OrderId = Order.OrderId THEN 1 END) > 4;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 j	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Client.Name
+	FROM Client
+	INNER JOIN Order
+	ON Order.ClientId = Client.ClientId
+	INNER JOIN ShoppingCart
+	ON ShoppingCart.ClientId = public.Client.ClientId
+	GROUP BY Client.ClientId, Order.Discount, ShoppingCart.HasExpired
+	HAVING Client.City = 'Brasov' 
+	AND Order.Discount >= 50 
+	AND ShoppingCart.HasExpired = false;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 k	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Client.Name
+	FROM Gender
+	INNER JOIN Client
+	ON Client.GenderId = Gender.GenderId
+	INNER JOIN Order
+	ON Order.ClientId = Client.ClientId
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.OrderId = Order.OrderId
+	INNER JOIN Product
+	ON Product.ProductId = OrderedProduct.ProductId
+	INNER JOIN ShoppingCart
+	ON ShoppingCart.ClientId = Client.ClientId
+	GROUP BY Client.Name, Gender.Gender
+	HAVING  Gender.Gender = 'M' 
+	AND SUM(CASE WHEN Order.ClientId = Client.ClientId 
+			AND OrderedProduct.OrderId = Order.OrderId
+			AND OrderedProduct.ProductId = Product.ProductId
+			AND Product.ExpirationDate < CURRENT_DATE THEN 1 END)  > 9
+	AND SUM(CASE WHEN ShoppingCart.HasExpired = true
+			AND ShoppingCart.TotalAmount > 50 THEN 1 END) > 0;
+
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 l	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SELECT Product.Name, Product.Price
+	FROM Product
+	INNER JOIN OrderedProduct
+	ON OrderedProduct.ProductId = Product.ProductId
+	INNER JOIN ShoppingCartProduct
+	ON ShoppingCartProduct.ProductId = Product.ProductId
+	GROUP BY Product.Name, Product.Price
+	HAVING SUM(CASE WHEN OrderedProduct.ProductId = Product.ProductId THEN 1 END) > 0
+	AND SUM(CASE WHEN ShoppingCartProduct.ProductId = Product.ProductId THEN 1 END) = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
