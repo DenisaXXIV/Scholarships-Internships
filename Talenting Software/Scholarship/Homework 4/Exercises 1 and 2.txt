@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Order
     OrderId integer NOT NULL,
     ClientId integer NOT NULL,
     CreatedDate date NOT NULL,
-    TotalAmount double precision NOT NULL,
+    TotalAmount money NOT NULL,
     Discount integer NOT NULL,
     CONSTRAINT Order_pkey PRIMARY KEY (OrderId),
     CONSTRAINT Order_Client_fkey FOREIGN KEY (ClientId)
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS OrderedProduct
 CREATE TABLE IF NOT EXISTS ShoppingCart
 (
     ShoppingCartId integer NOT NULL,
-    TotalAmount double precision NOT NULL,
+    TotalAmount money NOT NULL,
     HasExpired boolean NOT NULL,
     ClientId integer NOT NULL,
     CONSTRAINT ShoppingCart_pkey PRIMARY KEY (ShoppingCartId),
@@ -111,11 +111,11 @@ INSERT INTO Product
 
 INSERT INTO Order
 	(OrderId, ClientId, CreatedDate, TotalAmount, Discount)
-	VALUES (1, 2, '2022-06-10', 3.00, 15);
+	VALUES (1, 2, '2022-06-10', '$3.50', 15);
 	
 INSERT INTO Order
 	(OrderId, ClientId, CreatedDate, TotalAmount, Discount)
-	VALUES (2, 1,'2022-06-09' , 15.00, 20);
+	VALUES (2, 1,'2022-06-09' , '$24.50', 20);
 
 INSERT INTO OrderedProduct
 	(OrderedProductId, OrderId, ProductId)
@@ -131,11 +131,11 @@ INSERT INTO OrderedProduct
 
 INSERT INTO ShoppingCart
 	(ShoppingCartId, TotalAmount, HasExpired, ClientId)
-	VALUES (1, 3.00, true, 1);
+	VALUES (1, '$18.50', true, 1);
 	
 INSERT INTO ShoppingCart
 	(ShoppingCartId, TotalAmount, HasExpired, ClientId)
-	VALUES (2, 15.00, false, 2);
+	VALUES (2, '$3.50', false, 2);
 
 INSERT INTO ShoppingCartProduct
 	(ShoppingCartProductId, ShoppingCartId, ProductId)
@@ -144,6 +144,8 @@ INSERT INTO ShoppingCartProduct
 INSERT INTO ShoppingCartProduct
 	(ShoppingCartProductId, ShoppingCartId, ProductId)
 	VALUES (2, 2, 1);
+
+-- /////////////////////////////////////////////////////////////////////////////////////	Exercises 1	   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 -- /////////////////////////////////////////////////////////////////////////////////////////	 a	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -301,17 +303,86 @@ SELECT Product.Name, Product.Price
 	AND SUM(CASE WHEN ShoppingCartProduct.ProductId = Product.ProductId THEN 1 END) = 0;
 
 
+-- /////////////////////////////////////////////////////////////////////////////////////	Exercises 2	   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+-- /////////////////////////////////////////////////////////////////////////////////////////	 a	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CREATE OR ALTER FUNCTION  totalDiscount(ThisClientId integer, StartDate date, EndDate date)
+RETURNS int
+AS
+$$
+DECLARE
+	totalDiscount int;
+BEGIN
+	SELECT SUM(Order.Discount) INTO totalDiscount
+	FROM Order
+	WHERE Order.ClientId = ThisClientid
+	AND Order.CreatedDate BETWEEN StartDate AND EndDate;
+	
+	RETURN totalDiscount;
+END;
+$$;
+
+-- /////////////////////////////////////////////////////////////////////////////////////////	 b	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CREATE OR REPLACE FUNCTION updates()
+    RETURNS trigger
+AS $BODY$
+BEGIN
+    UPDATE ShoppingCart
+	SET TotalAmount=((TotalAmount::money::numeric::float8-OLD.Price::money::numeric::float8)+NEW.Price::money::numeric::float8)::float8::numeric::money
+	WHERE ShoppingCart.ShoppingCartId IN 
+	( SELECT ShoppingCartProduct.ShoppingCartId
+	FROM ShoppingCartProduct
+		INNER JOIN Product
+	ON Product.ProductId = ShoppingCartProduct.ProductId
+	 GROUP BY Product.ProductId, ShoppingCartProduct.ProductId,ShoppingCartProduct.ShoppingCartId
+	HAVING Product.Price <> Price); 
+	
+    RETURN NEW;
+END;
+$BODY$;
+
+CREATE TRIGGER trg_UpdateTotalAmount
+    AFTER UPDATE 
+    ON Product
+    FOR EACH ROW
+    EXECUTE FUNCTION updates();
 
 
+-- /////////////////////////////////////////////////////////////////////////////////////////	 c	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+CREATE OR REPLACE PROCEDURE GetClientOrders( IN id_client integer)
+AS $$
+BEGIN
+	CREATE TABLE ClientOrders (
+    Name varchar(255),
+    Address varchar(255),
+    OrderId integer,
+    CreatedDate date,
+    TotalAmount money,
+	WasDiscountApplied boolean
+	);
 
-
-
-
-
-
+	INSERT INTO ClientOrders
+	( Name, Address, OrderId, CreatedDate, TotalAmount, WasDiscountApplied)
+	SELECT Name, CONCAT(Street, ',', City, ', ', "Country") AS Address, Order.OrderId, Order.CreatedDate, 
+	Order.TotalAmount, 
+	CASE WHEN Order.Discount<1 THEN FALSE
+		 ELSE TRUE END
+	FROM Client
+	INNER JOIN Order
+	ON Order.ClientId = Client.ClientId
+	GROUP BY Client.ClientId, Order.OrderId
+	HAVING Client.ClientId = id_client;
+	
+	CREATE VIEW ClientOrdersView AS
+	SELECT Name, Address, OrderId, CreatedDate, TotalAmount, WasDiscountApplied
+	FROM ClientOrders;
+	
+	RETURN;
+END; $$
 
 
 
