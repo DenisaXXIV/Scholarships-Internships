@@ -1,9 +1,9 @@
 <div align="center">
-  <img width="1188" alt="TrimbleXperience banner" src="https://github.com/DenisaXXIV/TrimbleXperience/blob/master/util/Banner.png">
+  <img width="1188" alt="TrimbleXperience banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Banner.png">
   <h1>TrimbleXperience</h1>
 <p>In TrimbleXperience, students have the opportunity to apply their theoretical knowledge in real life projects, being guided at each step by experienced mentors.</p>
 
-<img width="1188" alt="Stages banner" src="https://github.com/DenisaXXIV/TrimbleXperience/blob/master/util/Stages.png">
+<img width="1188" alt="Stages banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Stages.png">
 
 ## Scholarship
 
@@ -79,9 +79,9 @@
   </tr>
 </table>
 </div>
-<img width="1188" alt="only Angular Note-App" src="https://github.com/DenisaXXIV/TrimbleXperience/blob/master/util/Angular/HomeworksNotesApp.png">
-<img width="1188" alt="Angular Homeworks' Menu" src="https://github.com/DenisaXXIV/TrimbleXperience/blob/master/util/Angular/homeworksAngular.png">
-<img width="1188" alt="Industry Focus" src="https://github.com/DenisaXXIV/TrimbleXperience/blob/master/util/industryFocus.png">
+<img width="1188" alt="only Angular Note-App" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/HomeworksNotesApp.png">
+<img width="1188" alt="Angular Homeworks' Menu" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/homeworksAngular.png">
+<img width="1188" alt="Industry Focus" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/industryFocus.png">
 
 
 <sup>You can see more about this opportunity and the source of the images used [here](https://trimblexperience.trimble.com/)</sup>
