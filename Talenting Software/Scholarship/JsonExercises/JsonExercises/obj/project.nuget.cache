@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CwpLpKNm0PTHJJ2HLyRyqeptJMMgSCE3/4b40/9+6BqapwDJd+R6SImLads/oYvrg9yt8BnrUUvDO1drObWj+w==",
+  "dgSpecHash": "EbZpOqaeXoVJojFQoznbgzm9vP/BJCyTepPvshtkX+rdA3tKw+HyJbrnhbWJwh5YkGM5flb5p3z6+bn3o6FYSg==",
   "success": true,
   "projectFilePath": "E:\\Proiecte\\Scholarships-Internships\\Talenting Software\\Scholarship\\JsonExercises\\JsonExercises\\JsonExercises.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Denisa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Denisa\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
   ],
   "logs": []
 }
