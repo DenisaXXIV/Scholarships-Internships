@@ -1,87 +1,31 @@
 <div align="center">
-  <img width="1188" alt="TrimbleXperience banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Banner.png">
-  <h1>TrimbleXperience</h1>
-<p>In TrimbleXperience, students have the opportunity to apply their theoretical knowledge in real life projects, being guided at each step by experienced mentors.</p>
-
-<img width="1188" alt="Stages banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Stages.png">
-
-## Scholarship
-
-<table>
-  <thead>
-      <th>Angular</th>
-      <th>.NET</th>
-  </thead>
-  <tr align="left">
-    <td>Part 1: Angular Introduction
-    </td>
-    <td>Part 1: .NET Core Introduction
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework1">Part 2: HTML & CSS</a>
-    </td>
-    <td>Part 2: MVC Pattern & Documentation
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework2">Part 3: Getting familiar with Angular. Create first app</a>
-    </td>
-    <td>Part 3: Routing
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework3">Part 4: Modules, Components, Templates, Data Binding</a>
-    </td>
-    <td>Part 4: Create and Read Resources
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework4">Part 5: Pipes. Directives</a>
-    </td>
-    <td>Part 5: Update and Delete Resources
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework5">Part 6: Routing. Angular Forms</a>
-    </td>
-    <td>Part 6: Services & Dependency Injection
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 7: Services. Dependency injection
-    </td>
-    <td>Part 7: Mongo DB
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 8: Component interaction: @Input, @Output
-    </td>
-    <td>Part 8: DTO Models.Entity Models. AutoMapper. CORS Policy
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 9: Communication with server. HTTP
-    </td>
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/App-Notes">Front-end Final App</a>
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 10: HTTP Requests. Finalize the app
-    </td>
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/.Net/NotesApi">Back-end Final App</a>
-    </td>
-  </tr>
-    <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Angular">All Angular Homeworks</a>
-    </td>
-    <td>
-  </tr>
-</table>
+  <img width="1188" alt="TechXpand Your Horizon  banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/R%20Systems/util/banner.png">
+  
+  <h1>TechXpand Your Horizon - Java Academy</h1>
 </div>
-<img width="1188" alt="only Angular Note-App" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/HomeworksNotesApp.png">
-<img width="1188" alt="Angular Homeworks' Menu" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/homeworksAngular.png">
-<img width="1188" alt="Industry Focus" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/industryFocus.png">
+  
+The R Systems Programming Academy is an internship program with the mission to onboard, train and develop future innovators and digital technology experts.
+
+From technologies to work methodologies and concepts, this year’s Java Academy is packed with 4 weeks of intensive trainings and another 4 weeks with practical tasks where students will dive in a telco project.
+
+<div align="center">
+<h2>Learn how to</h2>
+</div>
+<ul>
+    <li>Do object oriented analysis and design using common design patterns</li>
+    <li>Deep dive into Java programming technologies like Java Spring and SpringBoot</li>
+    <li>Develop projects for multiple web clients on desktops and various mobile devices</li>
+    <li>Maintain existing codebase including troubleshooting bugs and adding new features</li>
+    <li>Support continuous improvement by investigating alternatives and technologies and presenting these for architectural review</li>
+</ul>
+
+<div align="center">
+<h2>About R Systems</h2>
+</div>
+
+Systems is a global technology and analytics services company. We help our clients achieve speed-to-market, overcome digital barriers, and create business value with our specialized service offerings and consultative business approach.
+We speak the language of business as fluently as we do the language of technology. In other words: We speak Digital. Our goal: accelerate our clients’ digital leadership.
+For almost 30 years in the telecom and technology industry, we have successfully delivered over 1000 complex, high-stake projects to more than 100 operators worldwide, supporting them throughout the 2G to 5G evolution.
 
 
-<sup>You can see more about this opportunity and the source of the images used [here](https://trimblexperience.trimble.com/)</sup>
+<sup>You can see more about this opportunity and the source of the images used [here](https://eu.rsystems.com/)</sup>
