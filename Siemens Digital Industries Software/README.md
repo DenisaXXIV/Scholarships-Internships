@@ -1,87 +1,27 @@
 <div align="center">
-  <img width="1188" alt="TrimbleXperience banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Banner.png">
-  <h1>TrimbleXperience</h1>
-<p>In TrimbleXperience, students have the opportunity to apply their theoretical knowledge in real life projects, being guided at each step by experienced mentors.</p>
-
-<img width="1188" alt="Stages banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Stages.png">
-
-## Scholarship
-
-<table>
-  <thead>
-      <th>Angular</th>
-      <th>.NET</th>
-  </thead>
-  <tr align="left">
-    <td>Part 1: Angular Introduction
-    </td>
-    <td>Part 1: .NET Core Introduction
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework1">Part 2: HTML & CSS</a>
-    </td>
-    <td>Part 2: MVC Pattern & Documentation
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework2">Part 3: Getting familiar with Angular. Create first app</a>
-    </td>
-    <td>Part 3: Routing
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework3">Part 4: Modules, Components, Templates, Data Binding</a>
-    </td>
-    <td>Part 4: Create and Read Resources
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework4">Part 5: Pipes. Directives</a>
-    </td>
-    <td>Part 5: Update and Delete Resources
-    </td>
-  </tr>
-  <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Homework5">Part 6: Routing. Angular Forms</a>
-    </td>
-    <td>Part 6: Services & Dependency Injection
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 7: Services. Dependency injection
-    </td>
-    <td>Part 7: Mongo DB
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 8: Component interaction: @Input, @Output
-    </td>
-    <td>Part 8: DTO Models.Entity Models. AutoMapper. CORS Policy
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 9: Communication with server. HTTP
-    </td>
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/App-Notes">Front-end Final App</a>
-    </td>
-  </tr>
-  <tr align="left">
-    <td>Part 10: HTTP Requests. Finalize the app
-    </td>
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/.Net/NotesApi">Back-end Final App</a>
-    </td>
-  </tr>
-    <tr align="left">
-    <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble/Angular/Angular">All Angular Homeworks</a>
-    </td>
-    <td>
-  </tr>
-</table>
+  <img width="1188" alt="Siemens banner" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Siemens%20Digital%20Industries%20Software/util/banner.png">
+  <h1>Curious Minds Spring School</h1>
 </div>
-<img width="1188" alt="only Angular Note-App" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/HomeworksNotesApp.png">
-<img width="1188" alt="Angular Homeworks' Menu" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/Angular/homeworksAngular.png">
-<img width="1188" alt="Industry Focus" src="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/Trimble/util/industryFocus.png">
+<p>It is a one-month program aimed at students with intermediate knowledge of C++, one year before graduation.</p>
+<p>The first weeks will aim to develop your knowledge and programming experience, which you will be able to put into practice in a team project during the second part of the program</p>
+
+<div align="center">
+<h2>Where the program takes place</h2>
+</div>
+
+Online, with the hope that we can meet face to face at our headquarters. Streaming will be available for all online training classes.
+
+<div align="center">
+<h2>Reasons to sign up</h2>
+</div>
+
+A practical introduction to the industry.
+
+Access to highly trained trainers who work in the field.
+
+The opportunity to continue the Curious Minds Software Summer School & Bootcamp program, at the end of which there may be an opportunity for an internship.
 
 
-<sup>You can see more about this opportunity and the source of the images used [here](https://trimblexperience.trimble.com/)</sup>
+
+
+<sup>You can see more about this opportunity and the source of the images used [here](https://new.siemens.com/ro/ro.html)</sup>
