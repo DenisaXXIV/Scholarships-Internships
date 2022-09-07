@@ -11,13 +11,140 @@ From technologies to work methodologies and concepts, this year’s Java Academy
 <div align="center">
 <h2>Learn how to</h2>
 </div>
-<ul>
-    <li>Do object oriented analysis and design using common design patterns</li>
-    <li>Deep dive into Java programming technologies like Java Spring and SpringBoot</li>
-    <li>Develop projects for multiple web clients on desktops and various mobile devices</li>
-    <li>Maintain existing codebase including troubleshooting bugs and adding new features</li>
-    <li>Support continuous improvement by investigating alternatives and technologies and presenting these for architectural review</li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <td>Main Topic</td>
+      <td>Start</td>
+      <td>Agenda</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!--___________________________________________  WELCOME _______________________________________________________-->
+    <tr>
+      <td rowspan=3>Welcome</td>
+      <td rowspan=3>05 sept</td>
+      <td>Greeting Meeting</td>
+    </tr>
+    <tr>
+      <td>IT Induction</td>
+    </tr>
+    <tr>
+      <td>HR Induction</td>
+    </tr>
+    <!--___________________________________________ LINUX _______________________________________________________-->
+    <tr>
+      <td rowspan=2>Linux commands & Bash Scripting</td>
+      <td>6 sept</td>
+      <td>general overview, useful commands, compiling and running a java program</td>
+    </tr>
+    <tr>
+      <td>7 sept</td>
+      <td>authorized key, scripting, conditionals</td>
+    </tr>
+    <!--___________________________________________ GIT _______________________________________________________-->
+    <tr>
+      <td>SCM familiarization</td>
+      <td>8 sept</td>
+      <td>Version Control system, GIT, GIT commands, CTS GitLab</td>
+    </tr>
+    <!--___________________________________________ BASICS _______________________________________________________-->
+    <tr>
+      <td rowspan=7>Java basics</td>
+      <td> 9 sept</td>
+      <td>IDE </td>
+    </tr>
+    <tr>
+      <td>12 sept</td>
+      <td>clean code, jar file, pack code, "javac" si "java"</td>
+    </tr>
+    <tr>
+      <td>13 sept</td>
+      <td>logging, rotating logs</td>
+    </tr>
+    <tr>
+      <td>14 sept</td>
+      <td>OOP concepts, complex data types, object cloning</td>
+    </tr>
+    <tr>
+      <td>15 sept</td>
+      <td>algorithms, memory allocation, optimizations</td>
+    </tr>
+    <tr>
+      <td>16 sept</td>
+      <td>serialization/deserialization, JSON, GSON, YAML</td>
+    </tr>
+    <tr>
+      <td>19 sept</td>
+      <td>JMS( queues, topics)</td>
+    </tr>
+    <!--___________________________________________ UNIT TESTING _______________________________________________________-->
+    <tr>
+      <td>Unit Testing & Mocking</td>
+      <td>20 sept</td>
+      <td>JUnit, Mockito Framework</td>
+    </tr>
+    <!--___________________________________________ MySQL _______________________________________________________-->
+    <tr>
+      <td rowspan=3>Database familiarization</td>
+      <td>21 sept</td>
+      <td>MySQL</td>
+    </tr>
+    <tr>
+      <td>22 sept</td>
+      <td>JDBC</td>
+    </tr>
+    <tr>
+      <td>23 sept</td>
+      <td>Hibernate</td>
+    </tr>
+    <!--___________________________________________ MAVEN _______________________________________________________-->
+    <tr>
+      <td>Maven familiarization</td>
+      <td>26 sept</td>
+      <td>Basic operations, goals, plugins, multi-module projects, versioning concepts</td>
+    </tr>
+    <!--___________________________________________ MULTI-THREADING & SOCKETS _______________________________________________________-->
+    <tr>
+      <td rowspan=3>Files, multi-threading, sockets</td>
+      <td>27 sept</td>
+      <td>files management</td>
+    </tr>
+    <tr>
+      <td>28 sept</td>
+      <td>concurrency</td>
+    </tr>
+    <tr>
+      <td>29 sept</td>
+      <td>networking</td>
+    </tr>
+    <!--___________________________________________ SPRING _______________________________________________________-->
+    <tr>
+      <td>Spring Framework</td>
+      <td>30 sept - 6 oct </td>
+      <td>Spring Core & Boot/ Microservices, Spring REST, Spring-data</td>
+    </tr>
+    <!--___________________________________________ DOCKER _______________________________________________________-->
+    <tr>
+      <td>Containerization</td>
+      <td>7 oct</td>
+      <td>Docker, Dockerfile, Nexus</td>
+    </tr>
+    <!--___________________________________________ PROJECT _______________________________________________________-->
+    <tr>
+      <td>Project</td>
+      <td>10 oct - 3 nov</td>
+      <td>Group project with all participants</td>
+    </tr>
+    <!--___________________________________________ FINAL _______________________________________________________-->
+    <tr>
+      <td>Academy Finish Celebration</td>
+      <td>4 nov</td>
+      <td>Project presentation, Celebration</td>
+    </tr>
+  </tbody>
+<table>
 
 <div align="center">
 <h2>About R Systems</h2>
