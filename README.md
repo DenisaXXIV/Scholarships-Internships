@@ -7,7 +7,7 @@
 
 | Start Date | End Date | Name | Company | Type |Languages| Frameworks|Database|
 |----|-----|------|-------|--|--|--|--|
-|Oct. 2021| Dec.2021| | e-novation|I|Python|||
+|Oct. 2021| Dec. 2021| | e-novation|I|Python|||
 | Oct. 2021| Jan. 2022| [Deep Learning](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Xperi) |Xperi|S|Python|||
 | Feb. 2022 | Apr. 2022 | [Curious Minds Spring School](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Siemens%20Digital%20Industries%20Software) | Siemens|S | C++|||
 |Mar. 2022 | Apr. 2022 | [TrimblExperience](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/Trimble) | Trimble|S|C#  TypeScript| .NET   Angular |MongoDB|
