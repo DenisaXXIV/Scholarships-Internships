@@ -119,17 +119,17 @@ From technologies to work methodologies and concepts, this year’s Java Academy
       <td>29 sept</td>
       <td>networking</td>
     </tr>
-    <!--___________________________________________ SPRING _______________________________________________________-->
-    <tr>
-      <td>Spring Framework</td>
-      <td>30 sept - 6 oct </td>
-      <td>Spring Core & Boot/ Microservices, Spring REST, Spring-data</td>
-    </tr>
     <!--___________________________________________ DOCKER _______________________________________________________-->
     <tr>
       <td>Containerization</td>
-      <td>7 oct</td>
+      <td>30 sept</td>
       <td>Docker, Dockerfile, Nexus</td>
+    </tr>
+    <!--___________________________________________ SPRING _______________________________________________________-->
+    <tr>
+      <td>Spring Framework</td>
+      <td>3 oct - 7 oct </td>
+      <td>Spring Core & Boot/ Microservices, Spring REST, Spring-data</td>
     </tr>
     <!--___________________________________________ PROJECT _______________________________________________________-->
     <tr>
