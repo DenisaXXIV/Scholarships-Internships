@@ -1,0 +1,3 @@
+Tema: De extras din data curenta exchange-ul pentru forintul unguresc
+
+curl --silent https://www.bnr.ro/files/xml/curs_2022_9_6.xml | sed -e "s/xmlns/ignore/" | xmllint -xpath '//DataSet/Body/Cube/Rate[@currency="HUF"]/text()' -

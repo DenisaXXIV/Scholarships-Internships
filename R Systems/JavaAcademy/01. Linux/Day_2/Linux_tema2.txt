@@ -1,0 +1,3 @@
+de imbunatatit fisierul problema.sh cu:
+FOUND=0; MYPID='33033238'; MYARRAY=( $(ps | grep -v "PID" | awk '{ print $1 }') ); for i in "${MYARRAY[@]}"; do if [ $MYP
+ID -eq $i ]; then FOUND=1; fi; done; echo "FOUND $FOUND"

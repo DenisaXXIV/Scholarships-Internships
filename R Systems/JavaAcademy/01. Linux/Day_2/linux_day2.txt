@@ -1,0 +1,26 @@
+#!/bin/bash
+
+FILE=/home/denisa/problem_pid.txt
+
+START_program () {
+        java com.rsystems.Main > /home/denisa/main_output.txt &
+        PID=`echo $!`
+        echo "PID: $PID"
+        echo "$PID" > $FILE
+
+}
+
+if [ -f "$FILE" ]; then
+        pidNumber=$(ps | grep `cat ${FILE}` | wc -l)
+        echo "Open: ${pidNumber}"
+        if [ $pidNumber -eq 0 ]; then
+                echo "No match found!"
+                START_program
+        else
+
+                echo "Match found!"
+        fi
+else
+        echo "No file found"
+        START_program
+fi

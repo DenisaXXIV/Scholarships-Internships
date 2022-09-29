@@ -1,0 +1,246 @@
+create database testdb;
+create table testdb.testTable(
+testColumn varchar(255)
+);
+use testdb;
+rename table testTable to blog;
+alter table blog add title varchar(255);
+drop table blog;
+drop database testdb;
+
+create database blogdb;
+create table blogdb.users(
+id int not null,
+username varchar(50),
+email varchar(100),
+password varchar(50),
+role enum("admin","autor"),
+created_at timestamp,
+updated_at timestamp,
+primary key(id)
+);
+create table blogdb.posts(
+id int not null,
+user_id int not null,
+title varchar(100),
+created_at timestamp,
+updated_at timestamp,
+body text,
+image text,
+published boolean,
+views int,
+primary key(id),
+foreign key(user_id) references users(id)
+);
+
+create table blogdb.comments(
+id int not null,
+post_id int not null,
+author varchar(50),
+author_email varchar(100),
+approved boolean,
+created_at timestamp,
+primary key(id),
+foreign key(post_id) references posts(id)
+);
+insert into blogdb.users(
+id,
+username,
+email,
+password,
+role,
+created_at,
+updated_at) values (
+0, "denisa","denisa@mail.com","parola1","admin","2022-09-21 15:37:52","2022-09-21 15:37:52"
+);
+insert into blogdb.users(
+id,
+username,
+email,
+password,
+role,
+created_at,
+updated_at) values (
+1,"alex","alex@mail.com","parola2","autor","2022-09-21 15:37:52","2022-09-21 15:37:52"
+);
+select current_timestamp();
+
+alter table blogdb.comments drop constraint comments_ibfk_1;
+alter table blogdb.comments drop column id;
+alter table blogdb.posts drop column id;
+alter table blogdb.comments add column id int not null;
+alter table blogdb.comments add constraint primary key(id);
+alter table blogdb.posts add column id int not null auto_increment primary key;
+alter table blogdb.comments add constraint foreign key(post_id) references blogdb.posts(id);
+alter table blogdb.users drop column role;
+alter table blogdb.users add column roleEnum enum("admin","author");
+update blogdb.users
+set roleEnum = "admin"
+where id = 0;
+update blogdb.users
+set roleEnum = "author"
+where id = 1;
+
+insert into blogdb.posts(
+id,
+user_id,
+title,
+created_at,
+updated_at,
+body,
+image,
+published,
+views
+) values(
+0,1,"Lorem Ipsum","2022-09-21 16:10:33","2022-09-21 16:10:33","Dolor est..","https://something.com",1,3
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum","2022-09-21 16:10:33","2022-09-21 16:10:33","Dolor est..","https://something.com",1,3,null
+);
+select current_timestamp();
+
+alter table blogdb.comments modify column created_at timestamp default current_timestamp on update current_timestamp;
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+1, 1, "author1", "author1@email.com", true);
+
+update blogdb.posts set views=100000 where id=1;
+delete from blogdb.users where id=0;
+
+insert into blogdb.users(
+id,
+username,
+email,
+password,
+roleEnum) values (
+3,"author1","author1@mail.com","parola3","author"
+);
+insert into blogdb.users(
+id,
+username,
+email,
+password,
+roleEnum) values (
+4,"author2","author1@mail.com","parola4","author"
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum",null,null,"Dolor est..","https://something.com",1,100,null
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum654",null,null,"Dolor est..","https://something.com",1,3,null
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum12",null,null,"Dolor est..","https://something.com",1,3,null
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum1213",null,null,"Dolor est..","https://something.com",1,3,null
+);
+insert into blogdb.posts values(
+1,"Lorem Ipsum455562",null,null,"Dolor est..","https://something.com",1,3,null
+);
+
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+2, 5, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+3, 9, "author1", "author1@email.com", false);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+4, 3, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+5, 3, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+6, 3, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+7, 3, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+8, 3, "author1", "author1@email.com", true);
+insert into blogdb.comments(
+id,
+post_id,
+author,
+author_email,
+approved
+) values (
+9, 5, "author1", "author1@email.com", true);
+
+select * from blogdb.posts where user_id=1;
+select * from blogdb.posts where user_id=3;
+select title, body, views from blogdb.posts where user_id=1;
+select title, body, views,p.id, u.id, username from blogdb.posts as p join blogdb.users as u on p.user_id=u.id where u.id=3;
+select title, body, views,p.id, u.id, username from blogdb.posts as p , blogdb.users as u  where u.id=3 and p.user_id=u.id;
+
+select c.author, c.approved, p.title, u.username 
+from blogdb.comments as c , blogdb.posts as p , blogdb.users as u
+where c.post_id=p.id and p.user_id=u.id and u.username="author2"
+limit 1;
+
+select c.author, c.approved, p.title, u.username 
+from blogdb.comments as c 
+join blogdb.posts as p on c.post_id=p.id 
+join blogdb.users as u on p.user_id=u.id
+where u.username="author2"
+limit 1;
+
+select * from posts where user_id=3;
+select title, body, views, p.id, u.id, u.username from posts as p join users as u on p.user_id=u.id where u.id=3;
+SELECT current_timestamp(3);
+select c.author, c.approved, p.title, u.username from comments as c, posts as p, users as u where c.post_id=p.id and p.user_id=u.id and u.username = "author2" limit 1;
+SELECT current_timestamp(3);
+select c.author, c.approved, p.title, u.username from comments as c join posts as p on c.post_id=p.id join users as u on p.user_id=u.id where u.username = "author2" limit 1;
+SELECT current_timestamp(3);
+select * from posts where created_at BETWEEN '2022-09-21 16:11:56' AND '2022-09-21 16:30:56' ;
+
+select sum(views) from blogdb.posts;
+select max(views) as maximum, id from blogdb.posts;
+select avg(views), id from blogdb.posts;
+select min(views), id from blogdb.posts;
+select length(title), id from blogdb.posts;
+select upper(title) from blogdb.posts;
+update blogdb.posts set title = upper(title) 
+where id < 100; 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <property name="DEV_HOME" value="D:/OneDrive - R Systems Computaris Europe/Documents/Academy/Logging/SLF4J/logs" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+                      ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="JSON_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <includeContext>false</includeContext>
+            <fieldNames>
+                <timestamp>timestamp</timestamp>
+                <version>[ignore]</version>
+                <levelValue>[ignore]</levelValue>
+            </fieldNames>
+        </encoder>
+    </appender>
+
+    <appender name="fileX"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <file>${DEV_HOME}/logfile.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %-4relative [%thread] %-5level %logger{35} - %msg %n
+            </Pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover every second -->
+            <fileNamePattern>
+                ${DEV_HOME}/archived/logfile.%i.%d{yyyy-MM-dd_HH_mm-ss}.log
+            </fileNamePattern>
+            <maxFileSize>1MB</maxFileSize>
+        </rollingPolicy>
+
+    </appender>
+
+    <logger name="fileX" level="debug"
+            additivity="false">
+<!--        <appender-ref ref="CONSOLE" />-->
+        <appender-ref ref="fileX" />
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="JSON_STDOUT" />
+    </root>
+</configuration>

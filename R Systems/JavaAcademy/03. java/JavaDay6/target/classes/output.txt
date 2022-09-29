@@ -1,0 +1,3 @@
+
+------------Next Test------------
+{"Age":10,"name":"Bolt","isBoy":true,"chipCode":45.789,"weight":10.38,"isSenior":false}
