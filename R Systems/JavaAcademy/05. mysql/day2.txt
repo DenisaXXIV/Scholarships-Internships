@@ -1,0 +1,178 @@
+select blogdb.posts.id as id 
+from blogdb.posts 
+union distinct select blogdb.comments.id as id f
+rom blogdb.comments;
+select posts.id as id, posts.title 
+union all select comments.id as id, comments.author 
+from blogdb.comments;
+
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.comments as ci, blogdb.posts as pi;
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.comments as ci 
+inner join blogdb.posts as pi 
+on post_id = pi.id;
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.comments as ci 
+right join blogdb.posts as pi 
+on post_id = pi.id;
+
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.posts as pi 
+left join blogdb.comments as ci 
+on post_id = pi.id;
+
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.posts as pi 
+cross join blogdb.comments as ci 
+on post_id = pi.id;
+
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.posts as pi 
+left join blogdb.comments as ci 
+using (id);
+select ci.id, ci.author, ci.author_email, pi.title, pi.id 
+from blogdb.posts as pi 
+join blogdb.comments as ci 
+using (id);
+select u.id, u.username, pi.title, pi.id 
+from blogdb.posts as pi 
+cross join blogdb.users as u;
+
+select u.username, u.email 
+from blogdb.users as u 
+union all select c.author, c.author_email 
+from blogdb.comments as c;
+start transaction;
+alter table blogdb.comments 
+add column content text not null;	
+commit;
+start transaction;
+alter table blogdb.comments 
+add column test varchar(50) default "this is default" not null;
+commit;
+start transaction;
+alter table blogdb.comments 
+drop column test;
+alter table blogdb.comments 
+drop column content;
+commit;
+start transaction;
+alter table blogdb.comments 
+add column content text not null;
+commit;
+SET SQL_SAFE_UPDATES = 0;
+update blogdb.comments 
+set content = md5(rand());
+select * from blogdb.comments;
+
+insert into blogdb.posts 
+values(
+3,"Lorem Ipsum462",null,null,"Dolor est..","https://something.com",1,3,null
+);
+insert into blogdb.posts 
+values(
+4,"Lorem",null,null,"Dolor est..","https://something.com",1,3,null
+);
+
+-- 2. Select comment content, post title, views and username using INNER JOIN clause in ascending order by views.
+select c.content, p.title, p.views 
+from blogdb.comments as c 
+inner join blogdb.posts as p 
+on p.id=c.post_id 
+order by p.views asc;
+select c.content, p.title, p.views 
+from blogdb.comments as c 
+inner join blogdb.posts as p 
+on p.id=c.post_id 
+order by p.views desc;
+
+-- 3. Select comment content, post title, views and username using LEFT JOIN.
+select c.content, p.title, p.views, u.username 
+from blogdb.comments as c 
+left join blogdb.posts as p 
+on p.id = c.post_id 
+left join blogdb.users as u 
+on p.user_id = u.id;
+select c.content, p.title, p.views, u.username 
+from blogdb.comments as c 
+left join blogdb.posts as p 
+on p.id = c.post_id 
+left join blogdb.users as u 
+on p.user_id = u.id 
+group by u.username;
+
+-- 4. Select comment content, post title, views and username using RIGHT JOIN.
+select c.content, p.title, p.views, u.username 
+from blogdb.comments as c
+right join blogdb.posts as p 
+on c.post_id=p.id
+right join blogdb.users as u 
+on p.user_id=u.id
+group by u.username;
+
+-- 5. Get the number of posts for each user (use group by).
+select count(p.id) as postNumber, u.username, u.id 
+from blogdb.posts as p
+inner join blogdb.users as u 
+on p.user_id=u.id
+group by u.username;
+
+-- 6. Create a trigger for the posts table that sets the created_at and updated_at to current date when a new post is inserted.
+-- When a user updates the post from the posts table, create trigger that also updates the updated_at date.
+update blogdb.posts 
+set body="Dolor est 2" 
+where id=1;
+create trigger updated_post_trigger
+after update on blogdb.posts
+for each row update blogdb.users 
+set updated_at=current_timestamp();
+create view view_name as
+select *
+from blogdb.users
+where id != 0;
+
+ -- 7. Create a view containing username, email, post title, views, number of comments per post, published and post created_at date.
+ create view user_view as
+select p.id, email, title, views, count(c.id) 
+as comments_per_post, published, p.created_at 
+as post_created_at
+from users as u 
+join posts as p 
+on u.id=p.user_id
+join comments as c 
+on p.id=c.post_id
+group by p.id;
+select * from user_view 
+where title="Post12";
+
+create table post_archive (id integer, title text);
+create trigger after_update_posts
+after update on posts
+for each row insert into post_archive
+set post_archive.id = old.id, post_archive.title = old.title;
+create trigger after_delete_posts
+after delete on posts
+for each row insert into post_archive
+set post_archive.id = old.id, post_archive.title = old.title;
+             
+create index author_idx on comments (author);
+create index post_idx on posts(title, published);
+
+DELIMITER //
+CREATE PROCEDURE procedureName()
+    BEGIN
+        update users set roleEnum = 'Author' where id=1;
+        update users set updated_at = now() where id=1;
+    END //
+DELIMITER ;
+select * from users;
+call procedureName();
+DELIMITER //
+CREATE PROCEDURE update_user(IN input_id int)
+    BEGIN
+       update users set updated_at = now() where id=input_id;
+    END //
+DELIMITER ;
+
+-- 8. Create a stored procedure to insert a new post and return the list with all posts.
