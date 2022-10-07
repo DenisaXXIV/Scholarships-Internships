@@ -35,12 +35,12 @@ From technologies to work methodologies and concepts, this year’s Java Academy
     </tr>
     <!--___________________________________________ LINUX _______________________________________________________-->
     <tr>
-      <td rowspan=2>Linux commands & Bash Scripting</td>
-      <td>6 sept</td>
+      <td rowspan=2><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/01.%20Linux">Linux commands & Bash Scripting</a></td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/R%20Systems/JavaAcademy/01.%20Linux/Day_1/Linux_tema1.txt">6 sept</td>
       <td>general overview, useful commands, compiling and running a java program</td>
     </tr>
     <tr>
-      <td>7 sept</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/01.%20Linux/Day_2">7sept</a></td>
       <td>authorized key, scripting, conditionals</td>
     </tr>
     <!--___________________________________________ GIT _______________________________________________________-->
@@ -51,28 +51,28 @@ From technologies to work methodologies and concepts, this year’s Java Academy
     </tr>
     <!--___________________________________________ BASICS _______________________________________________________-->
     <tr>
-      <td rowspan=7>Java basics</td>
-      <td> 9 sept</td>
+      <td rowspan=7><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java">Java Basics</a></td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/R%20Systems/JavaAcademy/03.%20java/JavaDay1/Parallelogram.java">9 sept</a></td>
       <td>IDE </td>
     </tr>
     <tr>
-      <td>12 sept</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java/JavaDay">12 sept</a></td>
       <td>clean code, jar file, pack code, "javac" si "java"</td>
     </tr>
     <tr>
-      <td>13 sept</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java/JavaDay3">13 sept</a></td>
       <td>logging, rotating logs</td>
     </tr>
     <tr>
-      <td>14 sept</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java/JavaDay4">14 sept</a></td>
       <td>OOP concepts, complex data types, object cloning</td>
     </tr>
     <tr>
-      <td>15 sept</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java/JavaDay5">15 sept</a></td>
       <td>algorithms, memory allocation, optimizations</td>
     </tr>
     <tr>
-      <td>16 sept</td>
+      <td></a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/03.%20java/JavaDay6">16 sept</a></td>
       <td>serialization/deserialization, JSON, GSON, YAML</td>
     </tr>
     <tr>
@@ -81,19 +81,19 @@ From technologies to work methodologies and concepts, this year’s Java Academy
     </tr>
     <!--___________________________________________ UNIT TESTING _______________________________________________________-->
     <tr>
-      <td>Unit Testing & Mocking</td>
+      <td><a href="https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/04.%20unit-tests/BankApplication">Unit Testing & Mocking</a></td>
       <td>20 sept</td>
       <td>JUnit, Mockito Framework</td>
     </tr>
     <!--___________________________________________ MySQL _______________________________________________________-->
     <tr>
-      <td rowspan=3>Database familiarization</td>
+      <td rowspan=3>[Database familiarization](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/05.%20mysql)</td>
       <td>21 sept</td>
-      <td>MySQL</td>
+      <td>[MySQL](https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/R%20Systems/JavaAcademy/05.%20mysql/Day1.txt)</td>
     </tr>
     <tr>
       <td>22 sept</td>
-      <td>JDBC</td>
+      <td>[JDBC](https://github.com/DenisaXXIV/Scholarships-Internships/blob/master/R%20Systems/JavaAcademy/05.%20mysql/day2.txt)</td>
     </tr>
     <tr>
       <td>23 sept</td>
@@ -101,15 +101,15 @@ From technologies to work methodologies and concepts, this year’s Java Academy
     </tr>
     <!--___________________________________________ MAVEN _______________________________________________________-->
     <tr>
-      <td>Maven familiarization</td>
+      <td>[Maven familiarization](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/06.%20maven)</td>
       <td>26 sept</td>
       <td>Basic operations, goals, plugins, multi-module projects, versioning concepts</td>
     </tr>
     <!--___________________________________________ MULTI-THREADING & SOCKETS _______________________________________________________-->
     <tr>
-      <td rowspan=3>Files, multi-threading, sockets</td>
+      <td rowspan=3>[Files, multi-threading, sockets](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/07.%20networking)</td>
       <td>27 sept</td>
-      <td>files management</td>
+      <td>[files management](https://github.com/DenisaXXIV/Scholarships-Internships/tree/master/R%20Systems/JavaAcademy/07.%20networking/Day1-Networking)</td>
     </tr>
     <tr>
       <td>28 sept</td>
