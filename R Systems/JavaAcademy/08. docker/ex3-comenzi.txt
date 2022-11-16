@@ -1,0 +1,119 @@
+C:\Users\dan.dunai>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\dan.dunai>docker pull alpine
+Using default tag: latest
+latest: Pulling from library/alpine
+213ec9aee27d: Pull complete
+Digest: sha256:bc41182d7ef5ffc53a40b044e725193bc10142a1243f395ee852a8d9730fc2ad
+Status: Downloaded newer image for alpine:latest
+docker.io/library/alpine:latest
+
+C:\Users\dan.dunai>C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3
+'C:\Users\dan.dunai\OneDrive' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\dan.dunai>cd C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3>docker build -t "exercise3" .
+[+] Building 8.0s (6/6) FINISHED
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 83B                                                                                0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [internal] load metadata for docker.io/library/alpine:latest                                                   0.0s
+ => [1/2] FROM docker.io/library/alpine:latest                                                                     0.0s
+ => [2/2] RUN apk add mysql-client                                                                                 7.6s
+ => exporting to image                                                                                             0.3s
+ => => exporting layers                                                                                            0.3s
+ => => writing image sha256:ff1529d0465e145c8f0427b9ec2e88d2065354489345eb97e6687067b87069ed                       0.0s
+ => => naming to docker.io/library/exercise3                                                                       0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3>docker images
+REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+exercise3              latest    ff1529d0465e   6 seconds ago    42.8MB
+ddunai                 v2        9d903bbf4ca6   27 minutes ago   77.8MB
+<none>                 <none>    7a5f0563af10   33 minutes ago   77.8MB
+my-ubuntu-with-mysql   latest    a977440f4295   58 minutes ago   178MB
+mariadb                latest    11aee66fdc31   6 days ago       384MB
+ubuntu                 18.04     35b3f4f76a24   3 weeks ago      63.1MB
+ddunai                 v1        861309314631   4 weeks ago      77.8MB
+ubuntu                 22.04     2dc39ba059dc   4 weeks ago      77.8MB
+ubuntu                 latest    2dc39ba059dc   4 weeks ago      77.8MB
+alpine                 latest    9c6f07244728   7 weeks ago      5.54MB
+hello-world            latest    feb5d9fea6a5   12 months ago    13.3kB
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3>docker run -it exercise3
+/ # sh
+/ # mysql
+ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
+/ # exit
+/ #
+/ # exit
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex3>cd C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex4
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex4>docker-compose -f "my-deploy.yml" up -d -p "academy"
+Builds, (re)creates, starts, and attaches to containers for a service.
+
+Unless they are already running, this command also starts any linked services.
+
+The `docker-compose up` command aggregates the output of each container. When
+the command exits, all containers are stopped. Running `docker-compose up -d`
+starts the containers in the background and leaves them running.
+
+If there are existing containers for a service, and the service's configuration
+or image was changed after the container's creation, `docker-compose up` picks
+up the changes by stopping and recreating the containers (preserving mounted
+volumes). To prevent Compose from picking up changes, use the `--no-recreate`
+flag.
+
+If you want to force Compose to stop and recreate all containers, use the
+`--force-recreate` flag.
+
+Usage: up [options] [--scale SERVICE=NUM...] [--] [SERVICE...]
+
+Options:
+    -d, --detach               Detached mode: Run containers in the background,
+                               print new container names. Incompatible with
+                               --abort-on-container-exit.
+    --no-color                 Produce monochrome output.
+    --quiet-pull               Pull without printing progress information
+    --no-deps                  Don't start linked services.
+    --force-recreate           Recreate containers even if their configuration
+                               and image haven't changed.
+    --always-recreate-deps     Recreate dependent containers.
+                               Incompatible with --no-recreate.
+    --no-recreate              If containers already exist, don't recreate
+                               them. Incompatible with --force-recreate and -V.
+    --no-build                 Don't build an image, even if it's missing.
+    --no-start                 Don't start the services after creating them.
+    --build                    Build images before starting containers.
+    --abort-on-container-exit  Stops all containers if any container was
+                               stopped. Incompatible with -d.
+    --attach-dependencies      Attach to dependent containers.
+    -t, --timeout TIMEOUT      Use this timeout in seconds for container
+                               shutdown when attached or when containers are
+                               already running. (default: 10)
+    -V, --renew-anon-volumes   Recreate anonymous volumes instead of retrieving
+                               data from the previous containers.
+    --remove-orphans           Remove containers for services not defined
+                               in the Compose file.
+    --exit-code-from SERVICE   Return the exit code of the selected service
+                               container. Implies --abort-on-container-exit.
+    --scale SERVICE=NUM        Scale SERVICE to NUM instances. Overrides the
+                               `scale` setting in the Compose file if present.
+    --no-log-prefix            Don't print prefix in logs.
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex4>docker-compose -f "my-deploy.yml" -p academy up -d
+Creating network "academy_mysqlNetwork" with the default driver
+Creating academy_myClient_1 ... done
+Creating academy_myServer_1 ... done
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex4>docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                    NAMES
+4531f0cc4320   mariadb   "docker-entrypoint.s…"   37 seconds ago   Up 35 seconds   0.0.0.0:6306->3306/tcp   academy_myServer_1
+
+C:\Users\dan.dunai\OneDrive - R Systems\Documents\docker\ex4>

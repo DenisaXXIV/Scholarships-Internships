@@ -1,0 +1,24 @@
+Here is the input file format for you:
+
+File:
+-	no header record
+-	trailer record present (starting with “Total: “)
+-	field separator “---"
+
+Format:
+<unique_id>---<b-number>---<cellid>---<timestamp>---<a-number>---<duration>
+Total: <num_records>
+
+Validations:
+    - <duration> is not empty and is between 0 and 7200
+    - <timestamp> is a valid date in 'YYYYMMDDHH24MISS' format
+    - <num_records> per file is correct -> log descriptive error if something’s wrong
+
+
+
+
+
+
+
+1<unique_id>---2<b-number>---3<cellid>---4<timestamp>---5<a-number>---6<duration>
+Total: <num_records>

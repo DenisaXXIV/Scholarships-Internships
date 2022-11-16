@@ -1,0 +1,16 @@
+<unique_id>---<b-number>---<cellid>---<timestamp>---<a-number>---<duration>
+Total: <num_recs_total>
+
+unique_id	= 1
+<b-number>	= 40722888999
+<cellid>	= 22601ABCD0084
+<timestamp>	= 20200826122615
+<a-number>	= 40729111444
+<duration>	= 45
+
+id:
+1	-> corect
+2	-> duration err
+3	-> timestamp err
+4	-> 2&3
+5	-> ceva din format lipseste
